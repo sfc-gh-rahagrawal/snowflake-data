@@ -1,0 +1,15 @@
+[KEY_PAIR]
+user = "gitsvcaccount"
+account = "sfpscogs-ragrawal_aws_learning"
+authenticator = "SNOWFLAKE_JWT"
+private_key_file = "./rsa_key.p8"
+
+ 
+
+ 
+
+[connections.KEY_PAIR]
+user = "gitsvcaccount"
+account = "sfpscogs-ragrawal_aws_learning"
+authenticator = "SNOWFLAKE_JWT"
+private_key_file = "./rsa_key.p8"

@@ -1,0 +1,15 @@
+config-version: 1
+
+# The root folder for the database change scripts
+root-folder: ./deploy/script/schemachange
+
+connections-file-path: ./connection.toml
+
+connection-name: KEY_PAIR
+
+create-change-history-table: true
+change-history-table: DB_GOVERNANCE.SCHEMACHANGE.CHANGE_HISTORY
+
+# Define values for the variables to replaced in change scripts. vars supplied via the command line will be merged into YAML-supplied vars
+vars:
+    env_prefix: 'DEV'

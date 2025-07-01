@@ -1,0 +1,15 @@
+log_table: "DBA_CONTROL_DB.GOVERNANCE.DATA_SHARE_CATALOG"
+this_environment_identifier: "D_"
+execution_role: "ACCOUNTADMIN"
+create_table_if_not_exists: false
+create_schema_if_not_exists: false
+mask_column_list: 
+    - "BSB"
+    - "USERID"
+    - "POSTCODE"
+    - "EMAIL"
+
+default:
+  source_account: "RWWA_WAGERING_QUAL"
+  share_name: "DEV_Q_GMEE_DB_DATA_SHARE"
+  source_environment_identifier: "Q_"

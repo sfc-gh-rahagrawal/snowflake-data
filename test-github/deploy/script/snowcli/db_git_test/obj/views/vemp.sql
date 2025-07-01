@@ -1,0 +1,3 @@
+CREATE OR REPLACE VIEW db_git_test.obj.vEmp 
+AS 
+SELECT * FROM DB_GIT_TEST.OBJ.EMP
