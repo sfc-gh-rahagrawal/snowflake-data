@@ -1,1 +1,1 @@
-show roles
+show DATABASES;
