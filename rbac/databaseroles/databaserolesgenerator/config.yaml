@@ -1,0 +1,15 @@
+app_settings:
+  environment: "D"
+  database_name: "D_SCRIPT"
+
+script_mode:
+  type: no_schema  # Options: all_schema, single_schema, no_schema
+
+  single_schema:
+    schema_name: "APPS"
+
+  all_schema:
+    schemas_to_exclude:
+      - "INFORMATION_SCHEMA"
+      - "PUBLIC"
+    create_managed_schema: false
