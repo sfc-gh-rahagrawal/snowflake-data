@@ -1,9 +1,9 @@
 app_settings:
-  environment: "D"
-  database_name: "D_SCRIPT"
+  environment: "DEV"
+  database_name: "COLES_PURGE_TEST"
 
 script_mode:
-  type: no_schema  # Options: all_schema, single_schema, no_schema
+  type: all_schema  # Options: all_schema, single_schema, no_schema
 
   single_schema:
     schema_name: "APPS"
