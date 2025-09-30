@@ -8,11 +8,11 @@ pi_attributes_url = ''
 # This creates a DICTIONARY of environment objects,
 # with "DEV" and "TEST" as the keys.
 [app_settings.environments.DEV]
-account_name = "RAGRAWAL_AWS_LEARN"
-share_name_template = "<ENV>_<DB>_DATA_SHARE"
+account_name = "RAGRAWAL_AWS_SHARE"
+share_name_template = "INTERNAL_DATA_SHARE_<ENV>"
 reference_database = ""
 
 [app_settings.environments.TEST]
 account_name = "RAGRAWAL_AWS_SHARE"
-share_name_template = "<ENV>_DATA_SHARE"
+share_name_template = "INTERNAL_DATA_SHARE_<DB>_<ENV>"
 reference_database = ""
