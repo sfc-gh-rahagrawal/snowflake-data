@@ -1,0 +1,15 @@
+app_settings:
+  environment: "DEV"
+  database_name: "COLES_PURGE_TEST"
+
+script_mode:
+  type: all_schema  # Options: all_schema, single_schema, no_schema
+
+  single_schema:
+    schema_name: "APPS"
+
+  all_schema:
+    schemas_to_exclude:
+      - "INFORMATION_SCHEMA"
+      - "PUBLIC"
+    create_managed_schema: false
