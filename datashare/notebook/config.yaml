@@ -1,15 +1,40 @@
-log_table: "DBA_CONTROL_DB.GOVERNANCE.DATA_SHARE_CATALOG"
-this_environment_identifier: "D_"
-execution_role: "ACCOUNTADMIN"
 create_table_if_not_exists: false
 create_schema_if_not_exists: false
-mask_column_list: 
-    - "BSB"
-    - "USERID"
-    - "POSTCODE"
-    - "EMAIL"
+max_rows_to_load: 10000000
 
-default:
-  source_account: "RWWA_WAGERING_QUAL"
-  share_name: "DEV_Q_GMEE_DB_DATA_SHARE"
-  source_environment_identifier: "Q_"
+connections:
+    default:
+        source_account: "RAGRAWAL_AWS_LEARNING"
+        share_name: "INTERNAL_DATA_SHARE_DEV"
+        source_environment_identifier: "_PRD"
+        target_environment_identifier: "_DEV"
+        execution_role: "ACCOUNTADMIN"
+        log_table_namespace: "DB_GOVERNANCE.GOVERNANCE"
+    
+    DEV:
+        source_account: "RAGRAWAL_AWS_LEARNING"
+        share_name: "INTERNAL_DATA_SHARE_DEV"
+        source_environment_identifier: "_PRD"
+        target_environment_identifier: "_DEV"
+        execution_role: "ACCOUNTADMIN"
+        log_table_namespace: "DB_GOVERNANCE.GOVERNANCE"
+
+default_replacement_values:
+    text: 'z'
+    number: 9
+    date: '2099-12-31'
+    timestamp: '1900-12-31 00:00:00'
+
+masking_expression:
+  name: "regexp_replace(regexp_replace(val, '[a-zA-Z]', 'X'), '[0-9]', '9')"
+  phone: "regexp_replace(val, '[0-9]', '9')"
+  number: "regexp_replace(val, '[0-9]', '9')"
+  default: "regexp_replace(regexp_replace(val, '[a-zA-Z]', 'X'), '[0-9]', '9')"
+  email: >
+    regexp_replace(
+      regexp_replace(
+        regexp_replace(val, '(\\B[0-9])', '9'),
+        '(\\B[A-Za-z])', '*'
+      ),
+      '@.*$', '@' || RANDSTR(6, RANDOM()) || '.com'
+    )
