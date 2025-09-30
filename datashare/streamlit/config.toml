@@ -1,16 +1,16 @@
 # Main application settings
 [app_settings]
-logo_url = 'https://racingwa.sitefinity.cloud/images/default-source/general-images/rwwa-logo-card.png'
+logo_url = ''
 exclude_table_pattern = ["Z_AUDIT%", "Z_INGEST%"]
 
 # This creates a DICTIONARY of environment objects,
 # with "DEV" and "TEST" as the keys.
 [app_settings.environments.DEV]
-account_name = "RWWA_WAGERING_DEV"
+account_name = "RAGRAWAL_AWS_LEARN"
 share_name_template = "<ENV>_<DB>_DATA_SHARE"
 reference_database = ""
 
 [app_settings.environments.TEST]
-account_name = "RWWA_WAGERING_TEST"
+account_name = "RAGRAWAL_AWS_SHARE"
 share_name_template = "<ENV>_<DB>_DATA_SHARE"
 reference_database = ""
