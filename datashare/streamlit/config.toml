@@ -1,7 +1,9 @@
 # Main application settings
 [app_settings]
-logo_url = ''
+logo_url = 'https://cdn.cookielaw.org/logos/cb85e692-4053-4d0a-8dda-d24b5daa8b06/da03e0fe-832b-44c4-8eb4-08e1f224aa22/SNO-SnowflakeLogo_blue.png'
 exclude_table_pattern = ["Z_AUDIT%", "Z_INGEST%"]
+max_retention_days = 60
+pi_attributes_url = ''
 
 # This creates a DICTIONARY of environment objects,
 # with "DEV" and "TEST" as the keys.
@@ -12,5 +14,5 @@ reference_database = ""
 
 [app_settings.environments.TEST]
 account_name = "RAGRAWAL_AWS_SHARE"
-share_name_template = "<ENV>_<DB>_DATA_SHARE"
+share_name_template = "<ENV>_DATA_SHARE"
 reference_database = ""
