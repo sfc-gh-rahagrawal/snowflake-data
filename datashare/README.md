@@ -22,7 +22,7 @@ This project introduces an elegant solution using a **Streamlit app in Productio
 - Define masking, hashing, or tokenization for sensitive columns.  
 - The configuration is stored inside the **Snowflake share’s comment section** — no external config files needed.
 
-### In Development (Notebook or Script)
+### In Development (Notebook)
 - The Dev account reads the shared database.  
 - Metadata from the share comments is parsed automatically.  
 - The Notebook recreates filtered and masked views for testing — matching Production behavior securely.
