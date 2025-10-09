@@ -32,7 +32,7 @@ This project introduces an elegant solution using a **Streamlit app in Productio
 **No manual data movement** – Data stays in Snowflake.  
 **Always up-to-date** – Shares reflect latest Production data.  
 **Secure by design** – Masking and tokenization applied before sharing.  
-**Lightweight metadata exchange** – Uses Snowflake’s native comment field.  
+**Lightweight metadata exchange** – Uses Snowflake’s comment field **(secret sauce)**.  
 **Simple architecture** – Streamlit on Prod, Notebook on Dev.  
 
 ## Tech Stack
